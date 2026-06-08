@@ -2,7 +2,8 @@ log_ips = [
     "192.168.1.10",
     "185.220.101.1",
     "10.0.0.5",
-    "45.33.32.156"
+    "45.33.32.156",
+    "172.16.1.1"
 ]
 
 malicious_ips = [
@@ -11,5 +12,7 @@ malicious_ips = [
 ]
 
 for ip in log_ips:
+    print("Checking:", ip)
+
     if ip in malicious_ips:
         print("ALERT: Malicious IP detected ->", ip)
