@@ -11,10 +11,15 @@ malicious_ips = [
     "45.33.32.156"
 ]
 
+malicious_count = 0
+
 for ip in log_ips:
     print("Checking:", ip)
 
     if ip in malicious_ips:
         print("ALERT: Malicious IP detected ->", ip)
+        malicious_count = malicious_count + 1
+        
+print("Total malicious IPs found:", malicious_count)
 
 print("Scan Complete")
